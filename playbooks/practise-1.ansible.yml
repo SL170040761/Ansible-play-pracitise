@@ -58,21 +58,21 @@
     
     - name: Declaration of variable-1
       ansible.builtin.set_fact:
-        variable-1: this is my first attempt
+        variable_1: this is my first attempt
     
     - name: Declaration of register variable
       ansible.builtin.set_fact:
-        variable-2: "{{list.failed}}"
+        variable_2: "{{list.failed}}"
 
     - name: Output-1
       ansible.builtin.debug:
         msg:
-          - "The variable for a random Declaration is {{variable-1}}"
+          - "The variable for a random Declaration is {{variable_1}}"
     
     - name: Output from register
       ansible.builtin.debug:
         msg:
-          - "The variable from a register variable Declaration is{{variable-2}}"
+          - "The variable from a register variable Declaration is{{variable_2}}"
         
       
 
