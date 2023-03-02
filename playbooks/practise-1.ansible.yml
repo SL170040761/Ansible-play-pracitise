@@ -1,6 +1,10 @@
 - name: first practise example
-  hosts: all
+  hosts: localhost
+  variables: 
+    - VAR1: Pranay
+    - VAR2: Radha
   tasks:
     - name: Print hello world
       ansible.builtin.debug:
         msg: Hello world to all
+        msg: Hi {{VAR1}} and {{VAR2}}
