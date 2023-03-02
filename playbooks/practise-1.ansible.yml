@@ -1,6 +1,6 @@
 - name: first practise example
   hosts: localhost
-  variables: 
+  vars: 
     - VAR1: Pranay
     - VAR2: Radha
   tasks:
