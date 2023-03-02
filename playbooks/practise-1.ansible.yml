@@ -55,6 +55,27 @@
       ansible.builtin.debug:
         msg: 
           - "{{list}}"
+    
+    - name: Declaration of variable-1
+      ansible.builtin.set_fact:
+        variable-1: this is my first attempt
+    
+    - name: Declaration of register variable
+      ansible.builtin.set_fact:
+        variable-2: "{{list}}"
+
+    - name: Output-1
+      ansible.builtin.debug:
+        msg:
+          - {{variable-1}}
+    
+     - name: Output from register
+      ansible.builtin.debug:
+        msg:
+          - {{variable-2}}
+        
+      
+
 
 
 
