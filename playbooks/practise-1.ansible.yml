@@ -22,3 +22,14 @@
           - My Favorite food is {{Favorite_food}}
           - My Hobbies are {{Hobbies}}
 
+
+- name: third practise example from a task variable
+  hosts: localhost
+  tasks:
+    - name: Print hello world
+      vars:
+        - sites: youtube.com and instagram.com 
+      ansible.builtin.debug:
+        msg: 
+          - The sites i watch are {{sites}}
+
