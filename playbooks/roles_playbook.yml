@@ -1,0 +1,4 @@
+- name: Role level playbook, tasks and variables
+  hosts: localhost
+  roles:
+    - all_files
