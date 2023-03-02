@@ -69,7 +69,7 @@
         msg:
           - {{variable-1}}
     
-     - name: Output from register
+    - name: Output from register
       ansible.builtin.debug:
         msg:
           - {{variable-2}}
