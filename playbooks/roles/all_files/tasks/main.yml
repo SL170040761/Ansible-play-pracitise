@@ -2,4 +2,4 @@
   ansible.builtin.debug:
     msg: 
       - Hello world to all
-      - Hi {{VAR1}} and {{VAR}}
+      - Hi {{VAR1}} and {{VAR2}}
