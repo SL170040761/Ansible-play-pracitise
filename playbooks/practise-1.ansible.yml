@@ -54,7 +54,7 @@
     - name: Output of the list variable
       ansible.builtin.debug:
         msg: 
-          - The hostname is {{list}}
+          - "{{list}}"
 
 
 
