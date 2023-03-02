@@ -6,8 +6,8 @@
   tasks:
     - name: Print hello world
       ansible.builtin.debug:
-        msg1: Hello world to all
-        msg2: Hi {{VAR1}} and {{VAR2}}
+        msg: Hello world to all
+        msg: Hi {{VAR1}} and {{VAR2}}
 
 
 - name: first practise example
@@ -17,6 +17,6 @@
   tasks:
     - name: Print hello world
       ansible.builtin.debug:
-        msg3: My Favorite food is {{Favorite_food}}
-        msg4: My Hobbies are {{Hobbies}}
+        msg: My Favorite food is {{Favorite_food}}
+        msg: My Hobbies are {{Hobbies}}
 
