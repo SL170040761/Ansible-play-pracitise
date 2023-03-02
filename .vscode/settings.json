@@ -1,0 +1,4 @@
+{
+    "ansible.executionEnvironment.enabled": true,
+    "ansibleServer.trace.server": "verbose"
+}
