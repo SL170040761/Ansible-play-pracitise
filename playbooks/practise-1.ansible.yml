@@ -34,21 +34,28 @@
           - The sites i watch are {{sites}}
 
 
-- name: 4th practise example from an inventory file
+- name: 4th practise example from predefined variable
   hosts: localhost
   tasks:
-    - name: inventory file example
+    - name: predefined variable example
       ansible.builtin.debug:
         msg: 
           - "The hostname is {{ansible_hostname}}"
 
-# - name: 4th practise example from an inventory file
-#   hosts: all
-#   tasks:
-#     - name: inventory file example
-#       ansible.builtin.debug:
-#         msg: 
-#           - My Favorite games are {{Games}}
+
+
+- name: 5th practise example from register variable
+  hosts: localhost
+  tasks:
+    - name: predefined variable example
+      ansible.builtin.shell: ls
+      register: list
+
+    - name: Output of the list variable
+      ansible.builtin.debug
+        msg: 
+          - The hostname is {{list}}
+
 
 
 # - name: 4th practise example from an inventory file
