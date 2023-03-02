@@ -11,7 +11,7 @@
           - Hi {{VAR1}} and {{VAR2}}
 
 
-- name: first practise example
+- name: second practise example from a file
   hosts: localhost
   vars_files: 
     - variable-1.yml
