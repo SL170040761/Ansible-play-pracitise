@@ -73,9 +73,17 @@
       ansible.builtin.debug:
         msg:
           - "The variable from a register variable Declaration is{{variable_2}}"
-        
-      
 
+
+  
+        
+- name: 6th practise example from commandline
+  hosts: localhost
+  tasks:
+    - name: commandline variable passing
+      ansible.builtin.debug:
+        msg: 
+          - My name is {{name}}
 
 
 
