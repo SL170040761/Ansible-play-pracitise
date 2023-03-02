@@ -13,7 +13,7 @@
 - name: first practise example
   hosts: localhost
   vars_files: 
-    - variable.yml
+    - variable-1.yml
   tasks:
     - name: Print hello world
       ansible.builtin.debug:
