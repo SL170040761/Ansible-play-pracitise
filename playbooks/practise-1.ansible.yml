@@ -52,7 +52,7 @@
       register: list
 
     - name: Output of the list variable
-      ansible.builtin.debug
+      ansible.builtin.debug:
         msg: 
           - The hostname is {{list}}
 
