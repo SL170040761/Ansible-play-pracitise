@@ -35,7 +35,7 @@
 
 
 - name: 4th practise example from an inventory file
-  hosts: all
+  hosts: localhost
   tasks:
     - name: inventory file example
       ansible.builtin.debug:
