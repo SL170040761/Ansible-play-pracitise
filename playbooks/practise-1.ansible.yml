@@ -40,7 +40,7 @@
     - name: inventory file example
       ansible.builtin.debug:
         msg: 
-          - My Favorite games are {{Games}} and the hostname is {{ansible_hostname}}
+          - The hostname is {{ansible_hostname}}
 
 # - name: 4th practise example from an inventory file
 #   hosts: all
