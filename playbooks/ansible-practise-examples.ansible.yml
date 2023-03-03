@@ -4,4 +4,4 @@
    - name: creating a file
      ansible.builtin.file:
       path: /home/pranay/Practise-content/Ansible-play-pracitise/playbooks/dummy
-      state: present
+      state: directory
