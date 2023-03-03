@@ -1,4 +1,5 @@
 - name: Removing contents
+  hosts: localhost
   ansible.builtin.file:
     path: /home/pranay/Practise-content/Ansible-play-pracitise/playbooks/
     state: absent
