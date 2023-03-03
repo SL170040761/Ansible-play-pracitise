@@ -1,4 +1,4 @@
-- name: Removing contents
+- name: Recursively remove directory
   ansible.builtin.file:
-    path: /home/pranay/Practise-content/Ansible-play-pracitise/playbooks/
+    path: /home/pranay/Practise-content/Ansible-play-pracitise/playbooks
     state: absent
