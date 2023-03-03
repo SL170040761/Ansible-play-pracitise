@@ -1,4 +1,7 @@
-- name: Recursively remove directory
-  ansible.builtin.win_file:
-    path: /home/pranay/Practise-content/Ansible-play-pracitise/playbooks
-    state: absent
+- name: files stuff
+  hosts: localhost
+  tasks:
+   - name: deleting a file
+     ansible.builtin.file:
+     path: /home/pranay/Practise-content/Ansible-play-pracitise/playbooks/dummy
+     state: absent
