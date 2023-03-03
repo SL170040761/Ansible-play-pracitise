@@ -1,4 +1,4 @@
 - name: Recursively remove directory
-  ansible.builtin.file:
+  ansible.builtin.win_file:
     path: /home/pranay/Practise-content/Ansible-play-pracitise/playbooks
     state: absent
