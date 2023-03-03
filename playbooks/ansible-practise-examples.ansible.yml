@@ -3,5 +3,5 @@
   tasks:
    - name: deleting a file
      ansible.builtin.file:
-     path: /home/pranay/Practise-content/Ansible-play-pracitise/playbooks/dummy
-     state: absent
+      path: /home/pranay/Practise-content/Ansible-play-pracitise/playbooks/dummy
+      state: absent
