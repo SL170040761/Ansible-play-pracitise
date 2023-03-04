@@ -1,5 +1,5 @@
 - name: Installation of services
-  hosts: HOSTS_1
+  hosts: all
   tasks:
   - name: APT Repository installation
     apt_repository:
