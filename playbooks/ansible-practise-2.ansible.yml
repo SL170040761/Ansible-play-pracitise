@@ -1,6 +1,6 @@
 - name: Installation of services
   hosts: all
-  become:true
+  become: true
   tasks:
    ansible.builtin.apt:
     name: git
