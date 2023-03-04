@@ -1,5 +1,5 @@
 - name: Installation of services
-  hosts: 44.200.4.162
+  hosts: HOSTS_1
   tasks:
   - name: Installation of git
     ansible.builtin.apt:
