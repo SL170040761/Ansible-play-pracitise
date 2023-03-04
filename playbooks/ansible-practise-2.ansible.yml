@@ -2,9 +2,10 @@
   hosts: all
   become: true
   tasks:
-   ansible.builtin.apt:
-    name: git
-    state: latest
-    updated_cache: yes
+  - name: git Installation setup
+    ansible.builtin.apt:
+     name: git
+     state: latest
+     updated_cache: yes
 
   
