@@ -3,7 +3,7 @@
   become: true
   tasks:
   - name: git Installation setup
-    ansible.builtin.apt:
+    ansible.builtin.yum:
      name: git
      state: latest
      update_cache: yes
