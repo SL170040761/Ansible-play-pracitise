@@ -1,14 +1,10 @@
 - name: Installation of services
   hosts: all
+  become:true
   tasks:
-  - name: APT Repository installation
-    apt_repository:
-       repo: 'ppa:git-core/ppa'
-       state: present
-  - name: Installation of git
-    apt:
-     name: git
-     state: latest
-     updated_cache: yes
+   ansible.builtin.apt:
+    name: git
+    state: latest
+    updated_cache: yes
 
   
