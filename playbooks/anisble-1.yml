@@ -1,0 +1,8 @@
+- name: "First practise"
+  hosts: all
+  tasks:
+   - name: printing stuff
+     ansible.builtin.debug:
+      msg:
+       - "hello world"
+       - "Hi pranay"
