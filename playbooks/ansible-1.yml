@@ -1,8 +1,11 @@
 - name: "First practise"
-  hosts: all
+  hosts: localhost
+  vars:
+   var_1: "Good night"
   tasks:
    - name: printing stuff
      ansible.builtin.debug:
       msg:
        - "hello world"
        - "Hi pranay"
+       - "hello {{var_1}}"
