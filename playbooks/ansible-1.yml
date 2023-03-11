@@ -1,7 +1,7 @@
 - name: "First practise"
   hosts: localhost
-  vars:
-   var_1: "Good night"
+  vars_files:
+   - variable-1.yml
   tasks:
    - name: printing stuff
      ansible.builtin.debug:
