@@ -14,7 +14,7 @@
   get_url:
     url: "{{ repo_url }}"
     dest: /usr/local/bin/
-    mode: 0755 
+    mode: 0777
 
 - name: Extract foo.tgz into /var/lib/foo
   ansible.builtin.unarchive:
