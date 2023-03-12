@@ -17,6 +17,6 @@
 
 - name: Install terraform from the repo
   ansible.builtin.yum:
-    name: yum-utils
+    name: terraform
     state: present
   
