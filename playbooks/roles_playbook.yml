@@ -2,5 +2,5 @@
   hosts: all
   become: true
   roles:
-    - nginx
+    - " {{role_name}} "
 
