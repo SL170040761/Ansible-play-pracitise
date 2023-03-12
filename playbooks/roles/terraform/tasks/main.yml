@@ -11,12 +11,14 @@
     state: present
 
 - name: Add repository of terraform
-  ansible.builtin.yum_repository:
-    name: yum-config-manager
-    description: EPEL YUM repo
-    baseurl: "{{repo_url}}"
+  get_url:
+    url: {{repo_url}}
+    dest: /usr/local/bin/
+    mode: 0755 
+
+- name: Extract foo.tgz into /var/lib/foo
+  ansible.builtin.unarchive:
+    src: terraform_0.12.17_linux_amd64.zip
+    dest: /usr/local/bin/
 
 
-- name: Install terraform from the repo
-  ansible.builtin.shell: yum -y install terraform
-  
