@@ -12,7 +12,7 @@
 
 - name: Download terraform from a remote repo
   ansible.builtin.yum:
-    name: {{repo_url}}
+    name: "{{repo_url}}"
     state: present
 
 - name: Install terraform from the repo
