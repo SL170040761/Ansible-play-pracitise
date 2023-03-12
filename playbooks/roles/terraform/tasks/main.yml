@@ -12,7 +12,7 @@
 
 - name: Add repository of terraform
   get_url:
-    url: {{repo_url}}
+    url: {{ repo_url }}
     dest: /usr/local/bin/
     mode: 0755 
 
