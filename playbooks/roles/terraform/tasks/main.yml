@@ -20,5 +20,5 @@
 - name: Install terraform from the repo
   ansible.builtin.yum:
     name: terraform
-    state: present
+    state: latest
   

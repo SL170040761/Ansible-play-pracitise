@@ -1,0 +1,3 @@
+- name: Error print
+  ansible.builtin.debug:
+   msg: Error skip
