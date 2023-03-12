@@ -10,11 +10,12 @@
     name: yum-utils
     state: present
 
+- name: Add repository of terraform
+  ansible.builtin.yum_repository:
+    name: yum-config-manager
+    description: EPEL YUM repo
+    baseurl: "{{repo_url}}"
 
-- name: Download terraform from a remote repo
-  ansible.builtin.yum:
-    name: "{{repo_url}}"
-    state: present
 
 - name: Install terraform from the repo
   ansible.builtin.yum:
