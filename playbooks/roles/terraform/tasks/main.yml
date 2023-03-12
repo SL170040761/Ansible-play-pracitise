@@ -18,7 +18,5 @@
 
 
 - name: Install terraform from the repo
-  ansible.builtin.yum:
-    name: terraform
-    state: latest
+  ansible.builtin.shell: yum -y install terraform
   
