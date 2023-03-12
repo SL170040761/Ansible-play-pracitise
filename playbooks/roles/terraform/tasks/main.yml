@@ -20,6 +20,7 @@
   ansible.builtin.unarchive:
     src: /usr/local/bin/terraform*
     dest: /usr/local/bin/
+    remote_src: true
      
 
 
