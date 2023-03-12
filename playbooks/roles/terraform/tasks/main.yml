@@ -1,0 +1,22 @@
+- name: Updating system
+  ansible.builtin.shell:
+    - yum update -y && sudo yum upgrade -y
+
+
+
+- name: Install yum-utils
+  ansible.builtin.yum:
+    name: yum-utils
+    state: present
+
+
+- name: Download terraform from a remote repo
+  ansible.builtin.yum:
+    name: {{repo_url}}
+    state: present
+
+- name: Install terraform from the repo
+  ansible.builtin.yum:
+    name: yum-utils
+    state: present
+  

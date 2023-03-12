@@ -1,11 +1,24 @@
 - name: "First practise"
   hosts: localhost
-  vars_files:
-   - variable-1.yml
   tasks:
+   - name: Registering variables
+     ansible.builtin.shell: |
+       ls
+       ls -la
+     
+     register: file_1
+
+   - name: Set_fact example
+     ansible.builtin.set_fact:
+      variable_1: "This is good"
+
    - name: printing stuff
      ansible.builtin.debug:
       msg:
-       - "hello world"
-       - "Hi pranay"
-       - "hello {{var_1}}"
+       - "{{file_1}}"
+
+   - name: printing stuff
+     ansible.builtin.debug:
+      msg:
+       - "{{variable_1}}"
+    

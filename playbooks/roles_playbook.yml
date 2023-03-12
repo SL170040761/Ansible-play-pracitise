@@ -1,4 +1,6 @@
-- name: Role level playbook, tasks and variables
-  hosts: localhost
+- name: Roles running example
+  hosts: all
+  become: true
   roles:
-    - all_files
+    - {{role_names}}
+
