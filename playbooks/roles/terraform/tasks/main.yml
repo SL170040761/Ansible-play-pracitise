@@ -1,6 +1,7 @@
 - name: Updating system
   ansible.builtin.shell:
-    - yum update -y && sudo yum upgrade -y
+    - yum update -y
+    - yum upgrade -y
 
 
 
