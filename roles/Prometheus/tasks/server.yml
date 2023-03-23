@@ -1,0 +1,12 @@
+- name: Template a file to /etc/file.conf
+  ansible.builtin.template:
+    src: prometheus.yml
+    dest: /opt/prometheus/prometheus.yml
+
+- name: Prometheus server start
+  ansible.builtin.service:
+    name: httpd
+    state: restarted
+
+- name: Check Prometheus is started
+  ansible.builtin.shell: netstat -lntp | grep 9090

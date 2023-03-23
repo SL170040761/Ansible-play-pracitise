@@ -1,0 +1,1 @@
+ansible-pull -i localhostls -U https://github.com/sai-pranay-teja/Ansible-play-pracitise.git roles_playbook.yml -e role_name=Prometheus
