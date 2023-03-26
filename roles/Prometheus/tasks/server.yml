@@ -7,17 +7,22 @@
 - name: Download foo.conf
   ansible.builtin.get_url:
     url: "{{ url_prometheus }}"
-    dest: /opt/prometheus
+    dest: ~
     mode: '777'
 
 - name: Unarchive a file that is already on the remote machine
   ansible.builtin.unarchive:
-    src: /opt/prometheus/prometheus-2.43.0.linux-amd64.tar.gz
+    src: ~/prometheus-2.43.0.linux-amd64.tar.gz
     dest: /opt/prometheus
     remote_src: no
 
+- name: Copy prometheus.service file to prometheus folder
+  ansible.builtin.template:
+    src: prometheus.yml
+    dest: /etc/systemd/system/prometheus.service
 
-- name: Template a file to prometheus folder
+
+- name: Copy prometheus.yml file to prometheus folder
   ansible.builtin.template:
     src: prometheus.yml
     dest: /opt/prometheus/prometheus.yml
