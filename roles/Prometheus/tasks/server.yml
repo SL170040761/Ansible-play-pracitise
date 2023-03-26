@@ -28,7 +28,7 @@
 - name: Copy prometheus.yml file to prometheus folder
   ansible.builtin.template:
     src: prometheus.yml
-    dest: /opt/prometheus/
+    dest: /opt/prometheus/prometheus.yml
 
 - name: Prometheus server start
   ansible.builtin.service:
