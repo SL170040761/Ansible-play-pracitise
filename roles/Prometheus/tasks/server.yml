@@ -12,7 +12,7 @@
 
 - name: Renaming the folder
   ansible.builtin.shell: |
-    mv ~/prometheus-2.43.0.linux-amd64.tar.gz prometheus /opt/ 
+    mv ~/prometheus-2.43.0.linux-amd64.tar.gz/ /opt/prometheus
 
 
 - name: Copy prometheus.service file to prometheus folder
