@@ -7,7 +7,7 @@
 - name: Download foo.conf
   ansible.builtin.get_url:
     url: "{{ url_prometheus }}"
-    dest: ~
+    dest: ~/
     mode: '777'
 
 - name: Unarchive a file that is already on the remote machine
