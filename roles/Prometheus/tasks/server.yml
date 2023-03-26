@@ -38,4 +38,4 @@
     state: restarted
 
 - name: Check Prometheus is started
-  ansible.builtin.shell: netstat -lntp | grep 9090
+  ansible.builtin.shell: ps -ef | grep /prometheus
