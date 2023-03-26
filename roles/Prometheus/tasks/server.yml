@@ -1,4 +1,4 @@
-- name: Template a file to /etc/file.conf
+- name: Template a file to prometheus folder
   ansible.builtin.template:
     src: prometheus.yml
     dest: /opt/prometheus/prometheus.yml
