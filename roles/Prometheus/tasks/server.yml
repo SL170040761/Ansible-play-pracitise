@@ -2,6 +2,7 @@
   ansible.builtin.shell: |
     cd /opt
     mkdir prometheus
+    touch prometheus.service
 
 
 - name: Download foo.conf
@@ -18,9 +19,13 @@
 
 - name: Copy prometheus.service file to prometheus folder
   ansible.builtin.template:
-    src: prometheus.yml
+    src: prometheus.service
     dest: /etc/systemd/system/prometheus.service
 
+- name: Prometheus server start
+  ansible.builtin.service:
+    name: prometheus
+    state: started
 
 - name: Copy prometheus.yml file to prometheus folder
   ansible.builtin.template:
