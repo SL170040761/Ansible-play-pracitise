@@ -7,9 +7,9 @@ After=network-online.target
 User=root
 Group=root
 Restart=on-failure
-ExecStart=/opt/prometheus/prometheus \
-  --config.file=/opt/prometheus/prometheus.yml \
-  --storage.tsdb.path=/opt/prometheus/data \
+ExecStart=/opt/{{prometheus_dir}}/prometheus \
+  --config.file=/opt/{{prometheus_dir}}/prometheus.yml \
+  --storage.tsdb.path=/opt/{{prometheus_dir}}/data \
   --storage.tsdb.retention.time=30d
 
 [Install]
