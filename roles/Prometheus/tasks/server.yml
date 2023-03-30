@@ -34,6 +34,7 @@
   ansible.builtin.service:
     name: prometheus
     state: restarted
+    daemon_reload: true
 
 - name: Check Prometheus is started
   ansible.builtin.shell: ps -ef | grep prometheus
