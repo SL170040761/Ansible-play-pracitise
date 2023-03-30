@@ -2,7 +2,7 @@
   ansible.builtin.unarchive:
     src: "{{ url_prometheus }}"
     dest: /opt/
-    remote_src: no
+    remote_src: true
     mode: '777'
 
 
