@@ -5,6 +5,9 @@
     remote_src: true
     mode: '777'
 
+- name: Renaming the folders
+  ansible.builtin.shell: |
+    mv /opt/prometheus* /opt/prometheus
 
 - name: Copy prometheus.service file to prometheus folder
   ansible.builtin.template:
