@@ -1,0 +1,11 @@
+- name: first practise example
+  hosts: localhost
+  tasks:
+    - name: Print hello world
+      debug:
+        msg: 
+          - Names are {{ item }}
+      loop:
+       - pranay
+       - teja
+       - pen
