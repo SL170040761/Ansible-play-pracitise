@@ -4,4 +4,4 @@ Instances:
 
 alert_file:
   - alerts.yml
-  - services-loop.yml
+  - services_loop.yml
