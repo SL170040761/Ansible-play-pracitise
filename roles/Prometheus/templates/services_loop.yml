@@ -5,7 +5,7 @@ groups:
 
 
   - alert: SystemD units
-    expr: node_systemd_unit_state{Name={{ instance }}, state="active"}<1
+    expr: node_systemd_unit_state{Name="{{ instance }}", state="active"}<1
     for: 1m
     labels:
       severity: critical
