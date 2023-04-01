@@ -2,7 +2,7 @@ groups:
 - name: example
   rules:
   - alert: HighRequestLatency
-    expr: up
+    expr: up < 1
     for: 1m
     labels:
       severity: critical
