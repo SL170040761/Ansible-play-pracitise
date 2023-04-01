@@ -11,6 +11,11 @@
     src: prometheus.service
     dest: /etc/systemd/system/prometheus.service
 
+- name: Copy alerts.yml file to prometheus folder
+  ansible.builtin.template:
+    src: alerts.yml
+    dest: /opt/{{prometheus_dir}}/alerts.yml
+
 - name: Copy prometheus.yml file to prometheus folder
   ansible.builtin.template:
     src: prometheus.yml
