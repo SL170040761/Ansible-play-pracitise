@@ -8,7 +8,6 @@ groups:
       severity: critical
     annotations:
       summary: High request latency
-
 # - name: example
 #   rules:
 #   {% for instance in Instances}
