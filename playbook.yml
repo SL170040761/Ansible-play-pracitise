@@ -6,6 +6,6 @@
         msg: 
           - Names are {{ item }}
       loop:
-       - pranay
-       - teja
-       - pen
+       - { name: pranay, age: 23}
+       - { name: teja, age: 20}
+       - { name: pen, age: 12}
