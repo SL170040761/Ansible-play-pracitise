@@ -10,4 +10,4 @@ groups:
       Name: {{ instance }}
     annotations: 
       summary: server down for server names {{ instance }}
-  {% end for %}
+  {% endfor %}
