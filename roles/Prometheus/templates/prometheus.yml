@@ -13,9 +13,8 @@ alerting:
 
 # Load rules once and periodically evaluate them according to the global 'evaluation_interval'.
 rule_files:
-{% for files in alert_file %}
-  - {{ files }}
-{% endfor %}
+  - alerts.yml
+  - services_loop.yml
 
 # A scrape configuration containing exactly one endpoint to scrape:
 # Here it's Prometheus itself.
