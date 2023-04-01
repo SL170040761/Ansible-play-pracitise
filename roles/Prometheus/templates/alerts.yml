@@ -5,6 +5,6 @@ groups:
     expr: up
     for: 1m
     labels:
-      severity: page
+      severity: critical
     annotations:
       summary: High request latency
