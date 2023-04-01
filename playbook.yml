@@ -4,7 +4,7 @@
     - name: Print hello world
       debug:
         msg: 
-          - Names are {{ item }}
+          - Names are {{ item.name }} and Ages are {{ item.age }}
       loop:
        - { name: pranay, age: 23}
        - { name: teja, age: 20}
