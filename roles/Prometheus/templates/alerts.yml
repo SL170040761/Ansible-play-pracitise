@@ -9,12 +9,13 @@ groups:
     annotations:
       summary: High request latency
 
-- name: example
-  rules:
-  - alert: CPU Usage
-    expr: up < 1
-    for: 1m
-    labels:
-      severity: critical
-    annotations:
-      summary: High request latency
+# - name: example
+#   rules:
+#   {% for instance in Instances}
+#   - alert: CPU Usage
+#     expr: up < 1
+#     for: 1m
+#     labels:
+#       severity: critical
+#     annotations:
+#       summary: High request latency
