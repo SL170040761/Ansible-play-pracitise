@@ -13,8 +13,9 @@
 
 - name: Copy alerts.yml file to prometheus folder
   ansible.builtin.template:
-    src: alerts.yml
-    dest: /opt/{{prometheus_dir}}/alerts.yml
+    src: "{{ item }}"
+    dest: /opt/{{prometheus_dir}}/{{ item }}
+  loop: "{{ alert_file }}"
 
 - name: Copy prometheus.yml file to prometheus folder
   ansible.builtin.template:

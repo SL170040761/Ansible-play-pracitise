@@ -1,3 +1,7 @@
-# Instances:
-#   - Instance-1
-#   - Instance-2
+Instances:
+  - Instance-1
+  - Instance-2
+
+alert_file:
+  - alerts.yml
+  - service-loop.yml

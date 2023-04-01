@@ -1,0 +1,13 @@
+groups:
+- name: loops using jinja templates
+  rules:
+  {% for instance in Instances %}
+  - alert: SyetemD units
+    expr: node_systemd_unit_state{Name={{ instance }}, state="active"}<1
+    for: 1m
+    labels:
+      severity: critical
+      Name: {{ instance }}
+    annotations: 
+      summary: server down for server names {{ instance }}
+  {% end for %}
