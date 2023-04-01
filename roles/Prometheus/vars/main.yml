@@ -1,6 +1,6 @@
 Instances:
-  - "Instance_1"
-  - "Instance-2"
+  - Instance_1
+  - Instance_2
 
 alert_file:
   - alerts.yml
