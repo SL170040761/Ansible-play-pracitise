@@ -1,7 +1,7 @@
 Instances:
-  - "Prometheus-server"
-  - "Instance-1"
-  - "Instance-2"
+  - Prometheus_server
+  - Instance_1
+  - Instance_2
 
 alert_file:
   - alerts.yml
