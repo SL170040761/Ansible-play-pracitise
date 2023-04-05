@@ -6,7 +6,8 @@
 
 
 - name: Gather information about any instance
-  ansible.builtin.debug:
-    msg:
-     - "{{ lookup('amazon.aws.ec2_instance_info', 'public_ip', region='us-east-1') }}"    
+  tasks:
+    ansible.builtin.debug:
+      msg:
+       - "{{ lookup('amazon.aws.ec2_instance_info', 'public_ip', region='us-east-1') }}"    
     
