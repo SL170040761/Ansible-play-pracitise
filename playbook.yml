@@ -1,17 +1,12 @@
-# - name: Gather information about any instance with Name beginning with RHEL and an uptime of at least 60 minutes
-#   amazon.aws.ec2_instance_info:
-#     region: "us-east-1"
-#     filters:
-#       instance-state-name: ["running"] 
-
-
-- name: Gather information about any instance
-  hosts: all
-  template:
-   - "{{ lookup('amazon.aws.ec2_instance_info', 'public_ip', region='us-east-1') }}"
-  # tasks:
-  #  - name: public_ip 
-  #    ansible.builtin.debug:
-  #      msg:
-  #       - "{{public_ip}}"    
-    
+  - name: Setup an instance for testing
+    amazon.aws.ec2_instance:
+      name: '{{ resource_prefix }}'
+      instance_type: t2.nano
+      image_id: "{{ (amis.images | sort(attribute='creation_date') | last).image_id }}"
+      wait: yes
+      volumes:
+        - device_name: /dev/xvda
+          ebs:
+            volume_size: 8
+            delete_on_termination: true
+    register: instance
