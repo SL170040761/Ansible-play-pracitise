@@ -1,3 +1,0 @@
-- name: Get my public IP
-  community.general.ipify_facts:
-    api_url: http://api.example.com/ipify
