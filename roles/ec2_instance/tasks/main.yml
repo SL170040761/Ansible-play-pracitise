@@ -2,4 +2,4 @@
 - ec2_instance_info:
     region: "us-east-1"
     filters:
-      instance-state-name: [ "running"]
+      instance-state-name: ["running"]
