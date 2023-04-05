@@ -1,5 +1,5 @@
 - name: public_ip
-  amazon.aws.ec2_instance_info:
+  community.aws.ec2_instance_info:
     region: "us-east-1"
     filters:
       instance-state-name: [ "running"]
