@@ -1,4 +1,9 @@
-- name: print public ip
-  ansible.builtin.debug:
-    msg:
-      - "{{var1}}"
+# - name: print public ip
+#   ansible.builtin.debug:
+#     msg:
+#       - "{{var1}}"
+
+- name: Gather information about any instance in states "shutting-down", "stopping", "stopped"
+  amazon.aws.ec2_instance_info:
+    filters:
+      instance-state-name: [ "shutting-down", "stopping", "stopped" ]
