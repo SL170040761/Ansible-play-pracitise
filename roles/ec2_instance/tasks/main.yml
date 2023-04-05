@@ -1,0 +1,4 @@
+- name: Copy SystemD exporter
+  ansible.builtin.template:
+    src: main.yml
+    dest: /home/pranay/output.txt
