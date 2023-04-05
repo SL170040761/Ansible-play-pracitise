@@ -13,5 +13,5 @@
    - name: public_ip 
      ansible.builtin.debug:
        msg:
-        - "{{ public_ip }}"    
+        - "{{public_ip}}"    
     
