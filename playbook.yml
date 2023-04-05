@@ -1,11 +1,3 @@
-- name: first practise example
-  hosts: localhost
-  tasks:
-    - name: Print hello world
-      debug:
-        msg: 
-          - Names are {{ item.name }} and Ages are {{ item.age }}
-      loop:
-       - { name: pranay, age: 23}
-       - { name: teja, age: 20}
-       - { name: pen, age: 12}
+- name: Get my public IP
+  community.general.ipify_facts:
+    api_url: http://api.example.com/ipify
