@@ -6,6 +6,7 @@
 
 
 - name: Gather information about any instance
+  hosts: all
   tasks:
    - name: public_ip 
      ansible.builtin.debug:
