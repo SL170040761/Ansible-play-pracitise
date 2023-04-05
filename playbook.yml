@@ -1,3 +1,5 @@
-- name: Get my public IP
-  community.general.ipify_facts:
-    api_url: http://api.example.com/ipify
+- name: Gather information about any instance with Name beginning with RHEL and an uptime of at least 60 minutes
+  amazon.aws.ec2_instance_info:
+    region: "us-east-1"
+    filters:
+      instance-state-name: ["running"] 
