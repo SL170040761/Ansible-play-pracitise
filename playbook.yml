@@ -7,11 +7,11 @@
 
 - name: Gather information about any instance
   hosts: all
-  vars:
-   - public_ip: "{{ lookup('amazon.aws.ec2_instance_info', 'public_ip', region='us-east-1') }}"
-  tasks:
-   - name: public_ip 
-     ansible.builtin.debug:
-       msg:
-        - "{{public_ip}}"    
+  template:
+   - "{{ lookup('amazon.aws.ec2_instance_info', 'public_ip', region='us-east-1') }}"
+  # tasks:
+  #  - name: public_ip 
+  #    ansible.builtin.debug:
+  #      msg:
+  #       - "{{public_ip}}"    
     
