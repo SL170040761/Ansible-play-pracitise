@@ -1,0 +1,15 @@
+# - name: Gather information about any instance with Name beginning with RHEL and an uptime of at least 60 minutes
+#   amazon.aws.ec2_instance_info:
+#     region: "us-east-1"
+#     filters:
+#       instance-state-name: ["running"] 
+
+
+- name: Gather information about any instance
+  hosts: local
+  tasks:
+   - name: public_ip 
+     ansible.builtin.debug:
+       msg:
+        -   
+    
