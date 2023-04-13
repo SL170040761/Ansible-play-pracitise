@@ -4,6 +4,6 @@
 #       - "{{var1}}"
 
 - name: Gather information about any instance in states
-  amazon.aws.ec2_instance_info:
+  amazon.aws.ec2_instance:
     filters:
       instance-state-name: [ "shutting-down", "stopping", "stopped" ]
