@@ -6,4 +6,4 @@
 - name: Gather information about any instance in states
   amazon.aws.ec2_instance:
     filters:
-      instance-state-name: [ "shutting-down", "stopping", "stopped" ]
+      instance-state-name: running
