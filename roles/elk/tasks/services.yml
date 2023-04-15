@@ -35,3 +35,8 @@
     src: nginx.conf
     dest: /etc/nginx/nginx.conf
 
+- name: Start Nginx Service
+  ansible.builtin.systemd:
+    name: nginx
+    state: restarted
+    enabled: yes
