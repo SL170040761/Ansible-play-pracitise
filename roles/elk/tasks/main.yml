@@ -1,3 +1,4 @@
 - name: Install Filebeat
+  when: services
   ansible.builtin.import_tasks:
     file: services.yml
