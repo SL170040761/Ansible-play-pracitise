@@ -1,13 +1,3 @@
-- name: Installation of elastic repo
-  ansible.builtin.template:
-    src: elastic.repo
-    dest: /etc/yum.repos.d/elastic.repo
-
-- name: Install Filebeat
-  ansible.builtin.yum:
-    name: filebeat
-    state: installed
-
 - name: Copying of filebeat.yml
   ansible.builtin.template:
     src: filebeat.yml
