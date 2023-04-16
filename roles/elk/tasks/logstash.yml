@@ -1,15 +1,3 @@
-- name: Copying of filebeat.yml
-  ansible.builtin.template:
-    src: filebeat.yml
-    dest: /etc/filebeat/filebeat.yml
-
-- name: Restart Filebeat
-  ansible.builtin.systemd:
-    name: filebeat
-    state: restarted
-    enabled: yes
-
-
 - name: Copy Logstash Configuration
   ansible.builtin.template:
     src: logstash.conf
