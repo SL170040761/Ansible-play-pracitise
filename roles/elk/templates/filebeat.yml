@@ -29,7 +29,7 @@ filebeat.inputs:
 
   # Paths that should be crawled and fetched. Glob based paths.
   paths:
-    - {{ log_file }}
+    - /var/log/nginx/access.log
     #- c:\programdata\elasticsearch\logs\*
 
   # Exclude lines. A list of regular expressions to match. It drops the lines that are
@@ -134,7 +134,7 @@ setup.kibana:
 # ---------------------------- Elasticsearch Output ----------------------------
 #output.elasticsearch:
   # Array of hosts to connect to.
-  # hosts: ["localhost:9200"]
+  #  hosts: ["localhost:9200"]
 
   # Protocol - either `http` (default) or `https`.
   #protocol: "https"
